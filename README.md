@@ -1,2 +1,2 @@
 # 3380Final
-Final Project for CS3830
+Final Project for CS3380
