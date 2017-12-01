@@ -9,7 +9,7 @@ Project Description: An online chat room where a user can make text posts.
                      Posts are editable. First time users can create a new 
                      username and password.
                      
-URL for the project: [shaynesmither.epizy.com/FinalProject/])shaynesmither.epizy.com/FinalProject/)
+URL for the project: [shaynesmither.epizy.com/FinalProject/])(http://shaynesmither.epizy.com/FinalProject/)
 
 sql used to create the user table
 
