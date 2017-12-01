@@ -8,14 +8,25 @@ Project Description: An online chat room where a user can make text posts.
                      more easily. Upload times will be available for each post. 
                      Posts are editable. First time users can create a new 
                      username and password.
-                     
-URL for the project: [shaynesmither.epizy.com/FinalProject/](http://shaynesmither.epizy.com/FinalProject/)
 
-sql used to create the user table
+Updated:            
+URL for the project: <http://chattafinalproject.epizy.com/Chat/>
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
+sql used to create the users and posts table
+
+CREATE TABLE users (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  username varchar(100) NOT NULL,
+  email varchar(100) NOT NULL,
+  password varchar(100) NOT NULL,
+  PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE posts(
+id INT( 11 ) ,
+contentID INT( 100 ) NOT NULL AUTO_INCREMENT ,
+content VARCHAR( 255 ) NOT NULL ,
+tag VARCHAR( 255 ) NOT NULL ,
+uploadTime TIMESTAMP,
+PRIMARY KEY ( contentID )
+)
