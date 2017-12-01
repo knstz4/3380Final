@@ -8,6 +8,8 @@ Project Description: An online chat room where a user can make text posts.
                      more easily. Upload times will be available for each post. 
                      Posts are editable. First time users can create a new 
                      username and password.
+                     
+URL for the project: shaynesmither.epizy.com/FinalProject/
 
 sql used to create the user table
 
