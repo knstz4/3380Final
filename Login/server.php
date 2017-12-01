@@ -1,12 +1,11 @@
 <?php
 session_start();
 
-// variable declaration
-$servername = "sql303.epizy.com";
-$username = "epiz_20659244";
-$password = "rwShlqy4Tn";
-$dbname = "epiz_20659244_albumProject";
-
+// set up the credential
+$servername = "sql312.epizy.com";
+$username = "epiz_21149710";
+$password = "33803380";
+$dbname = "epiz_21149710_chat";
 
 // Create connection
 $db = new mysqli($servername, $username, $password, $dbname);
@@ -41,9 +40,6 @@ if (isset($_POST['reg_user'])) {
 	}
 
 }
-
-
-// ... 
 
 // LOGIN USER
 if (isset($_POST['login_user'])) {
