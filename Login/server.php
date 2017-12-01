@@ -2,15 +2,10 @@
 session_start();
 
 // variable declaration
-$username = "";
-$email    = "";
-$errors = array(); 
-$_SESSION['success'] = "";
-
-$servername = "";
-$username = "";
-$password = "";
-$dbname = "";
+$servername = "sql303.epizy.com";
+$username = "epiz_20659244";
+$password = "rwShlqy4Tn";
+$dbname = "epiz_20659244_albumProject";
 
 
 // Create connection
