@@ -28,6 +28,14 @@ if (isset($_POST['reg_user'])) {
 	if ($password_1 != $password_2) {
 		array_push($errors, "The two passwords do not match");
 	}
+	
+       $check="SELECT count(*) FROM users WHERE username = '$username'";
+       $rs = mysqli_query($db,$check);
+       $data = mysqli_fetch_array($rs, MYSQLI_NUM);
+       if ($data[0] >= 1)
+       {
+           array_push($errors, "User already exists");
+       }
 
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
