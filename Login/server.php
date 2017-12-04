@@ -1,12 +1,11 @@
 <?php
 session_start();
 
-// variable declaration
-$servername = "sql303.epizy.com";
-$username = "epiz_20659244";
-$password = "rwShlqy4Tn";
-$dbname = "epiz_20659244_albumProject";
-
+// set up the credential
+$servername = "sql312.epizy.com";
+$username = "epiz_21149710";
+$password = "33803380";
+$dbname = "epiz_21149710_chat";
 
 // Create connection
 $db = new mysqli($servername, $username, $password, $dbname);
@@ -18,6 +17,8 @@ if (isset($_POST['reg_user'])) {
 	$email = mysqli_real_escape_string($db, $_POST['email']);
 	$password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
 	$password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+	
+	$errors =[];
 
 	// form validation: ensure that the form is correctly filled
 	if (empty($username)) { array_push($errors, "Username is required"); }
@@ -27,6 +28,14 @@ if (isset($_POST['reg_user'])) {
 	if ($password_1 != $password_2) {
 		array_push($errors, "The two passwords do not match");
 	}
+	
+       $check="SELECT count(*) FROM users WHERE username = '$username'";
+       $rs = mysqli_query($db,$check);
+       $data = mysqli_fetch_array($rs, MYSQLI_NUM);
+       if ($data[0] >= 1)
+       {
+           array_push($errors, "User already exists");
+       }
 
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
@@ -41,9 +50,6 @@ if (isset($_POST['reg_user'])) {
 	}
 
 }
-
-
-// ... 
 
 // LOGIN USER
 if (isset($_POST['login_user'])) {
