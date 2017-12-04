@@ -16,7 +16,7 @@ if isset($_POST['newContent']) {
 
     //get user id from username
     $username = $_SESSION['username'];
-    $userQuery = "SELECT id FROM users WHERE username = 'benthrasher5'";
+    $userQuery = "SELECT id FROM users WHERE username = '$username'";
 
     $userResult = mysqli_query($db, $userQuery);
     $userRow = $userResult->fetch_row();

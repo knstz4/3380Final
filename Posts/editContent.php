@@ -1,0 +1,24 @@
+<?php
+
+// variable declaration
+$servername = "sql303.epizy.com";
+$username = "epiz_20659244";
+$password = "rwShlqy4Tn";
+$dbname = "epiz_20659244_albumProject";
+// Create connection
+$db = new mysqli($servername, $username, $password, $dbname);
+
+//check for flag
+if isset($_POST['editContent']) {
+    //grab variables from post array
+    $newBody = mysqli_real_escape_string($db, $_POST['newBody']);
+    $newTag = mysqli_real_escape_string($db, $_POST['newTag']);
+    $postId = mysqli_real_escape_string($db, $_POST['postId']);
+
+    $query = "UPDATE posts SET content = '$newBody', tag = '$newTag' WHERE postId = $postId";
+
+    mysqli_query($db, $query);
+}
+
+
+?>
