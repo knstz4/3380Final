@@ -3,7 +3,7 @@
 require_once "dbConnect.php";
 
 //check for flag
-if isset($_POST['editContent']) {
+if (isset($_POST['editContent']) {
     //grab variables from post array
     $newBody = mysqli_real_escape_string($db, $_POST['newBody']);
     $newTag = mysqli_real_escape_string($db, $_POST['newTag']);
