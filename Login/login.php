@@ -8,7 +8,7 @@
 <body>
 
 	<div class="header">
-		<h2>Login</h2>
+		<h2>Login to Chatta!</h2>
 	</div>
 	
 	<form method="post" action="login.php">
