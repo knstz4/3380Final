@@ -13,6 +13,7 @@ Updated URL for the project: <http://chattafinalproject.epizy.com/Chat/>
 
 sql used to create the users and posts table:
 
+```sql
 CREATE TABLE users (
   id int(11) NOT NULL AUTO_INCREMENT,
   username varchar(100) NOT NULL,
@@ -29,6 +30,7 @@ tag VARCHAR( 255 ) NOT NULL ,
 uploadTime TIMESTAMP,
 PRIMARY KEY ( contentID )
 )
+```
 
 ERD for the database:
 ![ERD.png](blob/master/databaseERD.PNG)
