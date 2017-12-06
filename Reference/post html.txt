@@ -1,0 +1,13 @@
+<div class="media">
+               <div class="media-left mediHa-middle">
+                    <h1>adsf</h1>
+               </div>
+               <div class="media-body">
+                    <h4 class="media-heading">John Doe</h4> <small><i>Posted on February 19, 2016</i></small></h4></h4>
+                    <p>Johns message goes here</p>
+                    <div class="btn-group">
+                         <button type="button" class="btn btn-primary btn-xs">Edit</button>
+                         <button type="button" class="btn btn-primary btn-xs">Delete</button>
+                    </div>       
+               </div>
+          </div>
