@@ -31,4 +31,4 @@ PRIMARY KEY ( contentID )
 )
 
 ERD for the database:
-![ERD.png](blob/master/databaseERD.PNG)
+![ERD.png](/images/databaseERD.PNG)
