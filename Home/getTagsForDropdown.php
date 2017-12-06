@@ -9,7 +9,7 @@
   while ($row = mysqli_fetch_assoc($result)) {
     $tag = $row["tag"];
 
-    echo "<li><a href='#'>$tag</a></li>";
+    echo "<li><a href='?tag=$tag'>$tag</a></li>";
   }
 
 ?>
