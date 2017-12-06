@@ -9,10 +9,9 @@ Project Description: An online chat room where a user can make text posts.
                      Posts are editable and deletable. First time users can create a new 
                      username and password.
 
-Updated:            
-URL for the project: <http://chattafinalproject.epizy.com/Chat/>
+Updated URL for the project: <http://chattafinalproject.epizy.com/Chat/>
 
-sql used to create the users and posts table
+sql used to create the users and posts table:
 
 CREATE TABLE users (
   id int(11) NOT NULL AUTO_INCREMENT,
