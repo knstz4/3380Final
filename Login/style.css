@@ -4,19 +4,22 @@
 }
 body {
 	font-size: 120%;
-	background:#F8F8FF;
+	background-image: url("Deer.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
 }
 
 .header {
 	width: 30%;
 	margin: 50px auto 0px;
 	color: white;
-	background: #5F9EA0;
+	background: #4a1a63;
 	text-align: center;
 	border: 1px solid #B0C4DE;
 	border-bottom: none;
 	border-radius: 10px 10px 0px 0px;
 	padding: 20px;
+        font-family:Lucida Sans Unicode
 }
 
 form, .content {
@@ -26,6 +29,7 @@ form, .content {
 	border: 1px solid #B0C4DE;
 	background: white;
 	border-radius: 0px 0px 10px 10px;
+        font-family:Lucida Sans Unicode
 }
 
 .input-group {
@@ -45,13 +49,14 @@ form, .content {
 	font-size: 16px;
 	border-radius: 5px;
 	border: 1px solid gray;
+        font-family:Lucida Sans Unicode
 }
 
 .btn {
 	padding: 10px;
 	font-size: 15px;
 	color: white;
-	background: #5F9EA0;
+	background: #4a1a63;
 	border: none;
 	border-radius: 5px;
 }
