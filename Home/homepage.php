@@ -71,7 +71,6 @@
                <input type ="text" class="form-control" name ="contentTag">
           	</div>
 		 <button type="submit" name="newContent" class="btn btn-default">Submit</button>
-		 <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
 
         </div>
         <div class="modal-footer">
