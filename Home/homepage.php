@@ -1,15 +1,3 @@
-<?php 
-	session_start(); 
-	if (!isset($_SESSION['username'])) {
-		$_SESSION['msg'] = "You must log in first";
-		header('location: login.php');
-	}
-	if (isset($_GET['logout'])) {
-		session_destroy();
-		unset($_SESSION['username']);
-		header("location: login.php");
-	}
-?>
 <!DOCTYPE html>
 
 
@@ -44,12 +32,22 @@
 </head>
 
 <body>
-     <div>
+
+
+
+<div>
+     <div class="btn-group">
+          <button type="button" class="btn btn-primary btn-xs">Home</button>
+          <button type="button" class="btn btn-primary btn-xs">GitHub</button>
+          <button type="button" class="btn btn-primary btn-xs">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+     </button>
+
           <h1>Welcome to Chatta!</h1>
      </div>
 
      <div class = "dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Discussion Board
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Tags
           <span class="caret"></span></button>
           <ul class="dropdown-menu">
                <li><a href="#">Board 1</a></li>
@@ -58,9 +56,25 @@
           </ul>
      </div>
 
-     <div class ="jumbotron" id="output"></div>
+     <div class ="jumbotron" id="output">
 
-     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">New Post</button>
+
+          <div class="media" style="padding-left: 20px" >
+
+               <div class="media-body">
+                    <h4 class="media-heading">John Doe</h4> <small><i>Posted on February 19, 2016 at 03:46 p.m.- <a href="url">Tag</a></i></small></h4></h4>
+                    <p>Johns message goes here</p>
+                    <div class="btn-group">
+                         <button type="button" class="btn btn-primary btn-xs">Edit</button>
+                         <button type="button" class="btn btn-primary btn-xs">Delete</button>
+                    </div>
+               </div>
+          </div>
+
+
+     </div>
+
+     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">New Post</button>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal">
