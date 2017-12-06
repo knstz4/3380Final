@@ -29,3 +29,6 @@ tag VARCHAR( 255 ) NOT NULL ,
 uploadTime TIMESTAMP,
 PRIMARY KEY ( contentID )
 )
+
+ERD for the database:
+![ERD.png](https://github.com/knstz4/3380Final/chattaERD.png)
