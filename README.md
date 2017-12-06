@@ -31,4 +31,4 @@ PRIMARY KEY ( contentID )
 )
 
 ERD for the database:
-![ERD.png](https://github.com/knstz4/3380Final/chattaERD.PNG)
+![ERD.png](blob/master/databaseERD.PNG)
