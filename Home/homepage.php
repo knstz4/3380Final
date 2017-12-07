@@ -41,7 +41,7 @@
 
 <div>
      <div class="btn-group">
-          <button type="button" class="btn btn-primary btn-xs">Home</button>
+	  <a href="chattafinalproject.epizy.com/Chat/index.php" class="btn btn-primary btn-xs">Home</a>
           <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">New Post</button>
           <a href="https://github.com/knstz4/3380Final" class="btn btn-primary btn-xs">GitHub</a>
           <a href="index.php?logout='1'" style="color: red" class="btn btn-primary btn-xs">Logout</a>
