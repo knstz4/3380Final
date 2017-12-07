@@ -43,8 +43,8 @@
      <div class="btn-group">
           <button type="button" class="btn btn-primary btn-xs">Home</button>
           <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">New Post</button>
-          <button type="button" class="btn btn-primary btn-xs">GitHub</button>
-          <a href="index.php?logout='1'" style="color: red" class="btn btn-primary btn-xs">Logout</a></a>
+          <a href="https://github.com/knstz4/3380Final" class="btn btn-primary btn-xs">GitHub</a>
+          <a href="index.php?logout='1'" style="color: red" class="btn btn-primary btn-xs">Logout</a>
 
           <h1>Welcome to Chatta!</h1>
      </div>
