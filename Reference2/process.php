@@ -1,7 +1,18 @@
 <?php
-$conn = mysqli_connect("sql309.epizy.com", "epiz_20707449", "28302830", "epiz_20707449_CS2830");
-mysqli_select_db($conn, "opentutorials");
-$sql = "INSERT INTO topic (title,description,author,created) VALUES('".$_POST['title']."', '".$_POST['description']."', '".$_POST['author']."', now())";
-$result = mysqli_query($conn, $sql);
-header('Location: http://localhost/index.php');
+mysql_connect('localhost', 'root', '');
+mysql_select_db('opentutorials');
+switch($_GET['mode']){
+    case 'insert':
+        $result = mysql_query("INSERT INTO topic (title, description, created) VALUES ('".mysql_real_escape_string($_POST['title'])."', '".mysql_real_escape_string($_POST['description'])."', now())");
+        header("Location: list.php"); 
+        break;
+    case 'delete':
+        mysql_query('DELETE FROM topic WHERE id = '.mysql_real_escape_string($_POST['id']));
+        header("Location: list.php"); 
+        break;
+    case 'modify':
+        mysql_query('UPDATE topic SET title = "'.mysql_real_escape_string($_POST['title']).'", description = "'.mysql_real_escape_string($_POST['description']).'" WHERE id = '.mysql_real_escape_string($_POST['id']));
+        header("Location: list.php?id={$_POST['id']}");
+        break;
+}
 ?>
