@@ -15,20 +15,23 @@
 
      <title>Chatta</title>
 
-     <script>
+     <?php
+	session_start(); 
 
-          function submitPost() {
+	if (!isset($_SESSION['username'])) {
+		$_SESSION['msg'] = "You must log in first";
+		header('location: login.php');
+	}
 
-               var output;
-               output = document.getElementById("message").innerHTML;
-               tag = document.getElementById("tag");
+	if (isset($_GET['logout'])) {
+		session_destroy();
+		unset($_SESSION['username']);
+		header("location: login.php");
+	}
 
-               document.getElementById("output") = output;
-               document.getElementById("message") = "";
-          }
+     ?>
 
 
-     </script>
 </head>
 
 <body>
@@ -38,10 +41,9 @@
 <div>
      <div class="btn-group">
           <button type="button" class="btn btn-primary btn-xs">Home</button>
+          <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">New Post</button>
           <button type="button" class="btn btn-primary btn-xs">GitHub</button>
-          <button type="button" class="btn btn-primary btn-xs">
-          <span class="glyphicon glyphicon-log-out"></span> Log out
-     </button>
+          <a href="index.php?logout='1'" style="color: red" class="btn btn-primary btn-xs">Logout</a></a>
 
           <h1>Welcome to Chatta!</h1>
      </div>
@@ -74,7 +76,7 @@
 
      </div>
 
-     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">New Post</button>
+
 
   <!-- Modal -->
   <div class="modal fade" id="myModal">
