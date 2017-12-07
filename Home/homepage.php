@@ -53,9 +53,7 @@
           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Tags
           <span class="caret"></span></button>
           <ul class="dropdown-menu">
-               <li><a href="#">Board 1</a></li>
-               <li><a href="#">Board 2</a></li>
-               <li><a href="#">Board 3</a></li>
+              <?php require_once "getTagsForDropdown.php"; ?>
           </ul>
      </div>
 
