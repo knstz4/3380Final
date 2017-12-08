@@ -34,3 +34,5 @@ PRIMARY KEY ( contentID )
 
 ERD for the database:
 ![ERD.png](/images/databaseERD.PNG)
+
+Video demonstration: https://www.youtube.com/watch?v=j-Hm4_2iAoQ
