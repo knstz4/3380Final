@@ -3,7 +3,7 @@
 require_once "dbConnect.php";
 
 //check for flag
-if (isset($_POST['deleteContent']) {
+if isset($_POST['deleteContent']) {
     //grab variables from post array
     $postId = mysqli_real_escape_string($db, $_POST['postId']);
 

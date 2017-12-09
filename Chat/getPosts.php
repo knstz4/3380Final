@@ -16,7 +16,7 @@
   $result = mysqli_query($db, $query);
 
   while ($row = mysqli_fetch_assoc($result)) {
-    $id = $row["contentId"];
+    $id = $row["contentID"];
     $userId = $row["id"];
     $content = $row["content"];
     $tag = $row["tag"];
@@ -33,7 +33,7 @@
     $dateString = "Posted on " . $date->format('F jS, Y') . " at " . $date->format('g:i a');
 
     //build html
-    echo "<div class='media'>";
+    echo "<div class='media message' id='post-$id'>";
     echo "<div class='media-body'>";
     echo "<h4 class='media-heading'>$username</h4>";
     echo "<small><i></i>$dateString - <a href='?tag=$tag'>$tag</a></small>";
@@ -42,8 +42,8 @@
     //only allow edit/delete if its your post
     if($_SESSION["username"] == $username) {
       echo "<div class='btn-group'>";
-      echo "<button type='button' class='btn btn-primary btn-xs'>Edit</button>";
-      echo "<button type='button' class='btn btn-primary btn-xs'>Delete</button>";
+      echo "<button type='button' class='btn btn-primary btn-xs' onclick='editPost($id)'>Edit</button>";
+      echo "<button type='button' class='btn btn-primary btn-xs' onclick='deletePost($id)'>Delete</button>";
       echo "</div>";
     }
 

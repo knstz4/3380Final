@@ -96,11 +96,14 @@ if (isset($_POST['login_user'])) {
 				$_SESSION['success'] = "You are now logged in";
 				header('location: index.php');
 			}
-		}
+        }
+          
 
 		else {
-			array_push($errors, "Wrong username/password combination");
-		}
+			array_push($errors, "Wrong username or password");
+        }
+      
+       
 	}
 }
 
